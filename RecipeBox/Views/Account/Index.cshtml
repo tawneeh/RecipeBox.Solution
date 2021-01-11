@@ -6,7 +6,7 @@
 
 <h2>Authentication with Identity</h2>
 <hr />
-@if (User.Identity.IsAuthenticated) // if our Account Controller Login() method succeeds, then greet the user by Name and add a logout button
+@if (User.Identity.IsAuthenticated)
 {
   <p>Hey @User.Identity.Name!</p>
   @using (Html.BeginForm("LogOff", "Account"))
