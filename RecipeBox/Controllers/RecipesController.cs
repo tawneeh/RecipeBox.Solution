@@ -87,7 +87,7 @@ namespace RecipeBox.Controllers
 
     public ActionResult AddCategory(int id)
     {
-      var thisRecipe = _db.Recipes.FirstOrDefault(recipe => recipes.RecipeId == id);
+      var thisRecipe = _db.Recipes.FirstOrDefault(recipes => recipes.RecipeId == id);
       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisRecipe);
     }
@@ -113,7 +113,7 @@ namespace RecipeBox.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       var thisRecipe = _db.Recipes.FirstOrDefault(recipes => recipes.RecipeId == id);
-      _db.Recipe.Remove(thisRecipe);
+      _db.Recipes.Remove(thisRecipe);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
