@@ -8,17 +8,17 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-@if(@Model.Items.Count == 0)
+@if(@Model.Recipes.Count == 0)
 {
   <p>This category does not contain any items</p>
 }
 else
 {
-  <h4>Items the category contains:</h4>
+  <h4>Recipes the category contains:</h4>
   <ul>
-  @foreach(var join in Model.Items)
+  @foreach(var join in Model.Recipes)
   {
-    <li>@join.Item.Description</li>
+    <li>@join.Recipe.Description</li>
   }
   </ul>
 }
