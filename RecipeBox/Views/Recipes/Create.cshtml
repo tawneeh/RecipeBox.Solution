@@ -12,7 +12,9 @@
     @Html.TextBoxFor(model => model.Description)
 
     @Html.LabelFor(model => model.Rating)
-    @Html.TextBoxFor(model => model.Rating)
+    @Html.DropDownListFor(model => model.Rating, Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+
+    // @Html.TextBoxFor(model => model.Rating)
 
     @Html.Label("Select category")
     @Html.DropDownList("CategoryId") 
