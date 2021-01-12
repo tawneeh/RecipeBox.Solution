@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using RecipeBox.Models;
 using System.Threading.Tasks;
 using RecipeBox.ViewModels;
+using System.Linq;
+using System.Security.Claims;
 
 namespace RecipeBox.Controllers
 {
@@ -19,9 +21,12 @@ namespace RecipeBox.Controllers
       _db = db;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
-      return View();
+      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      var userRecipes = _db.Recipes.Where(entry => entry.User.Id == currentUser.Id);
+      return View(userRecipes);
     }
 
     public IActionResult Register()
