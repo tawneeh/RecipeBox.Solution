@@ -2,16 +2,33 @@
   Layout = "_Layout";
 }
 
-@using System.Security.Claims
+@using System.Security.Claims;
+@using RecipeBox.Models;
+@model IEnumerable<RecipeBox.Models.Recipe>
 
 <h2>Authentication with Identity</h2>
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
   <p>Hey @User.Identity.Name!</p>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (Recipe recipe in Model)
+    {
+      <li>@Html.ActionLink($"{recipe.Description}", "Details", "Recipes", new { id = recipe.RecipeId })</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No recipes have been added yet!</h3>
+}
+
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn btn-danger" value="Log out" />
+    <input type="submit" class="btn btn-danger btn-xs" value="Log out" />
   }
 }
 else
@@ -20,4 +37,5 @@ else
   <p>@Html.ActionLink("Log in", "Login")</p>
 }
 
+<br>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
