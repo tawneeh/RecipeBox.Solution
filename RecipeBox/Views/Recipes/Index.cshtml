@@ -21,26 +21,12 @@ else
   <h3>No recipes have been added yet!</h3>
 }
 
-@using (Html.BeginForm("SearchAct", "Home", FormMethod.Post))
-{
-  <div>
-      Search for a Recipe:<br>
-      <input type="text" id="recipeToFind" name="recipeToFind">
+<form asp-controller="Recipes" asp-action="Index" method="get">
+    <p>
+        Search your list: <input type="text" name="SearchString" />
+        <input type="submit" value="Find Recipe!" />
+    </p>
+</form>
 
-      <input type="submit" id="submitId" value="submit" />
-
-  </div>
-}
-
-@* @{ // might show search Result
-  if(ViewBag.SearchKey != null)
-  {
-      <span>
-          Search Key: @ViewBag.SearchKey
-      </span>
-  }
-} *@
-
-<br>
 <p>@Html.ActionLink("Add new recipe", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
