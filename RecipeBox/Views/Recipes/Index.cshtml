@@ -3,7 +3,6 @@
 }
 
 @using RecipeBox.Models;
-@using System.Security.Claims
 @model IEnumerable<RecipeBox.Models.Recipe>
 
 <h1>Recipes for @User.Identity.Name</h1>
@@ -22,6 +21,26 @@ else
   <h3>No recipes have been added yet!</h3>
 }
 
-<p>@Html.ActionLink("Add new recipe", "Create")</p>
+@using (Html.BeginForm("SearchAct", "Home", FormMethod.Post))
+{
+  <div>
+      Search for a Recipe:<br>
+      <input type="text" id="recipeToFind" name="recipeToFind">
 
+      <input type="submit" id="submitId" value="submit" />
+
+  </div>
+}
+
+@* @{ // might show search Result
+  if(ViewBag.SearchKey != null)
+  {
+      <span>
+          Search Key: @ViewBag.SearchKey
+      </span>
+  }
+} *@
+
+<br>
+<p>@Html.ActionLink("Add new recipe", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

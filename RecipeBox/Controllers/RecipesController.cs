@@ -25,13 +25,14 @@ namespace RecipeBox.Controllers
     }
 
     //updated Index method
-    public async Task<ActionResult> Index()
+    public async Task<ActionResult> Index(string searchString)
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
       var userRecipes = _db.Recipes.Where(entry => entry.User.Id == currentUser.Id);
       return View(userRecipes);
-    }
+    } // add search functionality and POST here
+
 
     public ActionResult Create()
     {
