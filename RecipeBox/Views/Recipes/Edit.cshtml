@@ -10,18 +10,18 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.RecipeId)
+  @Html.HiddenFor(model => model.RecipeId)
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+  @Html.LabelFor(model => model.Description)
+  @Html.EditorFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Rating)
-    @Html.EditorFor(model => model.Rating) // this allows for a rating above 10
+  @Html.LabelFor(model => model.Rating)
+  @Html.EditorFor(model => model.Rating) // this allows for a rating above 10
 
-    @Html.Label("Select category")
-    @Html.DropDownList("CategoryId")
+  @Html.Label("Select category")
+  @Html.DropDownList("CategoryId")
 
-    <input type="submit" value="Save" />
+  <input type="submit" value="Save" />
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

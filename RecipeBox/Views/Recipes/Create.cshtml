@@ -8,15 +8,15 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Rating)
-    @Html.DropDownListFor(model => model.Rating, Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+  @Html.LabelFor(model => model.Rating)
+  @Html.DropDownListFor(model => model.Rating, Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
 
-    @Html.Label("Select category")
-    @Html.DropDownList("CategoryId") 
+  @Html.Label("Select category")
+  @Html.DropDownList("CategoryId") 
 
-    <input type="submit" value="Add new Recipe" class="btn btn-success" />
+  <input type="submit" value="Add new Recipe" class="btn btn-success" />
 }
 <p>@Html.ActionLink("Show all Recipes", "Index")</p>
