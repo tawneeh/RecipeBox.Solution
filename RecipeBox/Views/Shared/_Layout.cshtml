@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Recipe Box</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Recipe Box</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="~/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-light" id ="navCenter" href="/">Home</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/categories">Category List</a>
+      <a class="nav-link nav-link text-light" id ="navCenter" href="/categories/create">Add a new category</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes">Recipe List</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes/create">Add a new recipe</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/account">View your Account</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/account/login">Login</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/account/register">Register</a>
+    </div>
+  </nav>
+  <div class="container">
     @RenderBody()
-  </body>
+  </div>
+</body>
+
 </html>
