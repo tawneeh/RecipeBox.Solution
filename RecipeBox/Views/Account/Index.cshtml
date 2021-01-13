@@ -6,8 +6,13 @@
 @using RecipeBox.Models;
 @model IEnumerable<RecipeBox.Models.Recipe>
 
-<h2>Authentication with Identity</h2>
 <hr />
+
+
+
+
+
+
 @if (User.Identity.IsAuthenticated)
 {
   <p>Hey @User.Identity.Name!</p>
@@ -36,6 +41,3 @@ else
   <p>@Html.ActionLink("Register", "Register")</p>
   <p>@Html.ActionLink("Log in", "Login")</p>
 }
-
-<br>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
