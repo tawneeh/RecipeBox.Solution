@@ -9,10 +9,21 @@
 
 @if (Model.Any())
 {
+  <table>
+    <tr>
+        <th>
+        <h3>All recipes</h3>
+            @Html.ActionLink("Change Order", "Index", new { sortOrder = ViewBag.RatingSortParm })
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+  </table>
   <ul>
     @foreach (Recipe recipe in Model)
     {
-      <li>@Html.ActionLink($"{recipe.Description}", "Details", new { id = recipe.RecipeId })</li>
+      <li>@Html.ActionLink($"{recipe.Description}, {recipe.Rating}", "Details", new { id = recipe.RecipeId })</li>
     }
   </ul>
 } 

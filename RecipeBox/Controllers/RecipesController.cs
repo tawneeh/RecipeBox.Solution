@@ -25,7 +25,7 @@ namespace RecipeBox.Controllers
     }
 
     //updated Index method
-    public async Task<IActionResult> Index(string searchString)
+    public async Task<IActionResult> Index(string sortOrder, string searchString)
     {
       var thisUserId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var thisCurrentUser = await _userManager.FindByIdAsync(thisUserId);
@@ -33,6 +33,16 @@ namespace RecipeBox.Controllers
       if (!string.IsNullOrEmpty(searchString))
       {
           userRecipes = userRecipes.Where(s => s.Description.Contains(searchString));
+      }
+      ViewBag.RatingSortParm = string.IsNullOrEmpty(sortOrder) ? "rating_desc" : "";
+      switch (sortOrder)
+      {
+        case "rating_desc":
+        userRecipes = userRecipes.OrderByDescending(m => m.Rating); // should be hightest to lowest Rating
+        break;
+        default:
+        userRecipes = userRecipes.OrderBy(m => m.Description); // should be alphabetical
+        break;
       }
       return View(await userRecipes.ToAsyncEnumerable().ToList());
     }
