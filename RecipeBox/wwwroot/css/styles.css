@@ -91,15 +91,7 @@ body {
       border: 1px solid #fdbb28;
       background-color: #fff;
       color: #fdbb28; }
-  .login-wrapper a.forgot-password-link {
-    color: #080808;
-    font-size: 14px;
-    text-decoration: underline;
-    display: inline-block;
-    margin-bottom: 54px; }
-    @media (max-width: 575px) {
-      .login-wrapper a.forgot-password-link {
-        margin-bottom: 16px; } }
+  
   .login-wrapper-footer-text {
     font-size: 16px;
     color: #000;
@@ -124,4 +116,249 @@ body {
   
     background-color: #fff;
     min-height: 100vh; 
+}
+
+.register-section-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 68px 100px;
+  background-color: #fff; }
+  @media (max-width: 991px) {
+    .register-section-wrapper {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media (max-width: 575px) {
+    .register-section-wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      min-height: 100vh; } }
+
+.register-wrapper {
+  width: 300px;
+  max-width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  @media (max-width: 575px) {
+    .registerwrapper {
+      width: 100%; } }
+  .register-wrapper label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b0adad; }
+  .register-wrapper .form-control {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 0;
+    padding: 9px 5px;
+    min-height: 40px;
+    font-size: 18px;
+    font-weight: normal; }
+    .register-wrapper .form-control::-webkit-input-placeholder {
+      color: #b0adad; }
+    .register-wrapper .form-control::-moz-placeholder {
+      color: #b0adad; }
+    .register-wrapper .form-control:-ms-input-placeholder {
+      color: #b0adad; }
+    .register-wrapper .form-control::-ms-input-placeholder {
+      color: #b0adad; }
+    .register-wrapper .form-control::placeholder {
+      color: #b0adad; }
+  .register-wrapper .register-btn {
+    padding: 13px 20px;
+    background-color: #fdbb28;
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 14px; }
+    .register-wrapper .register-btn:hover {
+      border: 1px solid #fdbb28;
+      background-color: #fff;
+      color: #fdbb28; }
+  .register-wrapper a.forgot-password-link {
+    color: #080808;
+    font-size: 14px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 54px; }
+    @media (max-width: 575px) {
+      .register-wrapper a.forgot-password-link {
+        margin-bottom: 16px; } }
+  .register-wrapper-footer-text {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 0; }
+
+.register-title {
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 25px; }
+
+.register-img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+
+  -o-object-position: left;
+     object-position: left; }
+
+.bodyRegister{
+  
+    background-color: #fff;
+    min-height: 100vh; 
+}
+
+p {
+  font-family: Times;
+  color: white;
+}
+
+h1 {
+  font-family: Times;
+  color: wheat;
+  text-align: center;
+}
+
+h2 {
+  font-family: Times;
+}
+
+h3 {
+  font-family: Times;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-family: Times;
+}
+
+h5 {
+  font-family: Times;
+}
+
+li {
+  font-family: Times;
+  color: wheat;
+}
+
+.link {
+  font-family: Times;
+  color: wheat;
+}
+
+.sort {
+  font-family: Times;
+  font-style: italic;
+  color: rgb(89, 241, 241);
+}
+
+.bodyLogin {
+  
+  background-color: #fff;
+  min-height: 100vh; 
+}
+
+.dropDown {
+  font-family: Times;
+}
+
+.recipeC-section-wrapper {
+display: -webkit-box;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+        flex-direction: column;
+padding: 68px 100px;
+background-color: #fff; }
+@media (max-width: 991px) {
+  .recipeC-section-wrapper {
+    padding-left: 50px;
+    padding-right: 50px; } }
+@media (max-width: 575px) {
+  .recipeC-section-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100vh; } }
+
+.recipeC-wrapper {
+width: 300px;
+max-width: 100%;
+padding-top: 24px;
+padding-bottom: 24px; }
+@media (max-width: 575px) {
+  .recipeCwrapper {
+    width: 100%; } }
+.recipeC-wrapper label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b0adad; }
+.recipeC-wrapper .form-control {
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  border-radius: 0;
+  padding: 9px 5px;
+  min-height: 40px;
+  font-size: 18px;
+  font-weight: normal; }
+  .recipeC-wrapper .form-control::-webkit-input-placeholder {
+    color: #b0adad; }
+  .recipeC .form-control::-moz-placeholder {
+    color: #b0adad; }
+  .recipeC .form-control:-ms-input-placeholder {
+    color: #b0adad; }
+  .recipeC-wrapper .form-control::-ms-input-placeholder {
+    color: #b0adad; }
+  .recipeC-wrapper .form-control::placeholder {
+    color: #b0adad; }
+.recipeC-wrapper .register-btn {
+  padding: 13px 20px;
+  background-color: #fdbb28;
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 14px; }
+  .recipeC-wrapper .register-btn:hover {
+    border: 1px solid #fdbb28;
+    background-color: #fff;
+    color: #fdbb28; }
+
+.recipeC-wrapper-footer-text {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 0; }
+
+.recipeC-title {
+font-size: 30px;
+color: #000;
+font-weight: bold;
+margin-bottom: 25px; }
+
+.recipeC-img {
+width: 100%;
+height: 100vh;
+-o-object-fit: cover;
+   object-fit: cover;
+
+-o-object-position: left;
+   object-position: left; }
+
+.bodyRecipeC{
+
+  background-color: #fff;
+  min-height: 100vh; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
 }
