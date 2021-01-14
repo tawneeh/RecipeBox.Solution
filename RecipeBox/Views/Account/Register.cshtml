@@ -6,18 +6,39 @@
 
 @model RegisterViewModel
 
-<h2>Register a new user</h2>
+<body class="bodyRegister">
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 register-section-wrapper">
+          <div class="brand-wrapper">
+            
+          </div>
+          <div class="register-wrapper my-auto">
+            <h1 class="register-title">Register</h1>
+            <form action="/Account/Register" method="post">
+              <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="Email" name="Email" id="Email" class="form-control" placeholder="email@example.com">
+              </div>
+              <div class="form-group mb-4">
+                <label for="Password">Password</label>
+                <input type="password" name="Password" id="Password" class="form-control"
+                  placeholder="enter your passsword">
+              </div>
+              <input name="register" id="register" class="btn btn-block register-btn" type="submit" value="Register">
+              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Jn7BbZaZn9JnxRMN_FPSkemqXuUtXHmBRXHJQBYksBFYfRhGSmIimvsFPxw7T8BhAVK2iCATgoZvTlulbtvK_5SIiWkBqSng4wou5mb4ShGHOyBSvb1VieTcoo4q11beBWa3SMayqzzK4y3ugxKXoU">
+            </form>
+
+          </div>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img
+            src="https://cdn.discordapp.com/attachments/537816642122547212/799023214243217408/pexels-august-de-richelieu-4261783.jpg"
+            alt="register image" class="register-img">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
 <hr />
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
-{
-    @Html.LabelFor(user => user.Email)
-    @Html.TextBoxFor(user=> user.Email)
-
-    @Html.LabelFor(user=> user.Password)
-    @Html.PasswordFor(user=> user.Password)
-
-    @Html.LabelFor(user=> user.ConfirmPassword)
-    @Html.PasswordFor(user=> user.ConfirmPassword)
-
-    <input type="submit" value="Register" />
-}

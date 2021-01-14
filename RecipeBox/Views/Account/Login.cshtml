@@ -2,9 +2,8 @@
   Layout = "_Layout";
 }
 
-@using RecipeBox.ViewModels
-
-@model LoginViewModel
+@using RecipeBox.ViewModels;
+@model LoginViewModel;
 
 <body class="bodyLogin">
   <main>
@@ -12,21 +11,21 @@
       <div class="row">
         <div class="col-sm-6 login-section-wrapper">
           <div class="brand-wrapper">
-            @* <img src="assets/images/logo.svg" alt="logo" class="logo"> *@
+            
           </div>
           <div class="login-wrapper my-auto">
             <h1 class="login-title">Log in</h1>
-            <form action="#!">
+            <form action="/account/login" method="post">
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com">
+                <label for="Email">Email</label>
+                <input type="Email" name="Email" id="Email" class="form-control" placeholder="email@example.com">
               </div>
               <div class="form-group mb-4">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="form-control"
+                <label for="Password">Password</label>
+                <input type="Password" name="Password" id="Password" class="form-control"
                   placeholder="enter your passsword">
               </div>
-              <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+              <input name="login" id="login" class="btn btn-block login-btn" type="submit" value="Login">
             </form>
 
             <p class="login-wrapper-footer-text">Don't have an account? <a href=""
@@ -43,13 +42,3 @@
   </main>
 </body>
 <hr />
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
-
-    @Html.LabelFor(m => m.Password)
-    @Html.PasswordFor(m => m.Password)
-
-    <input type="submit" value="Log in" class="btn btn-default" />
-}
