@@ -29,7 +29,7 @@ namespace RecipeBox.Controllers
       return View(userRecipes);
     }
 
-    public IActionResult Register()
+    public ActionResult Register() // IActionResult
     {
       return View();
     }
