@@ -13,13 +13,15 @@
 <body>
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active text-light" id ="navCenter" href="/">Home</a>
-      <a class="nav-item nav-link text-light" id ="navCenter" href="/categories">Category List</a>
-      <a class="nav-link nav-link text-light" id ="navCenter" href="/categories/create">Add a new category</a>
-      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes">Recipe List</a>
-      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes/create">Add a new recipe</a>
-      <a class="nav-item nav-link text-light" id ="navCenter" href="/account">View your Account</a>
-      <a class="nav-item nav-link text-light" id ="navCenter" href="/account/login">Login</a>
+      <a class="nav-item nav-link active text-light" id ="navCenter" href="/">Home |</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/categories">Category List |</a>
+      <a class="nav-link nav-link text-light" id ="navCenter" href="/categories/create">Add a new category |</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes">Recipe List |</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/recipes/create">Add a new recipe |</a>
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/account">View your Account |</a>
+
+      <!-- If user is logged in, DON'T show login or register links / if user logged in, hide links below -->
+      <a class="nav-item nav-link text-light" id ="navCenter" href="/account/login">Login |</a>
       <a class="nav-item nav-link text-light" id ="navCenter" href="/account/register">Register</a>
     </div>
   </nav>
