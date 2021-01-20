@@ -101,6 +101,7 @@ Co-authored-by: Ellie Lambert <ebezjian@gmail.com>
 * Entity Framework Core
 * MySql
 * MySql Workbench
+* Identity
 
 ### License
 
