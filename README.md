@@ -1,7 +1,7 @@
 # _Recipe Box_ 
 
 #### _Authentication with Identity Practice for Epicodus_ 
-#### _DATE 01.11.2020_
+#### _DATE 01.11.2021_
 
 #### By _**Tawnee Harris and Ellie Lambert**_
 
@@ -107,4 +107,4 @@ Co-authored-by: Ellie Lambert <ebezjian@gmail.com>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2020 **_Tawnee Harris and Ellie Lambert_**
+Copyright (c) 2021 **_Tawnee Harris and Ellie Lambert_**
